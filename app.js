@@ -3,7 +3,15 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 app.get('/', function (req, res) {
-  res.send('Hello World, Kevin likes Novermber!')
+  res.send('Hello World, Kevin likes November!')
+})
+
+app.get('/show', (req, res) =>{
+
+    res.sendFile('index.html' , { root : __dirname});
+    
+
+
 })
 
 app.listen(PORT)
